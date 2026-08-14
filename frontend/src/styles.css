@@ -1,0 +1,1711 @@
+/* =========================================================
+   CHATRIEVAL
+   Global Stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   1. FONT IMPORTS
+   ========================================================= */
+
+@import url(
+  "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+);
+
+
+/* =========================================================
+   2. ROOT / GLOBAL
+   ========================================================= */
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #eef2f7;
+  background: #090c11;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: #090c11;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   3. APP SHELL
+   ========================================================= */
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 70% 10%,
+      rgba(52, 120, 246, 0.07),
+      transparent 30%
+    ),
+    #090c11;
+
+  color: #eef2f7;
+}
+
+
+/* =========================================================
+   4. SIDEBAR
+   ========================================================= */
+
+.sidebar {
+  width: 300px;
+  min-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px 18px;
+
+  background: #0d1118;
+  border-right: 1px solid #1d2530;
+}
+
+
+/* ---------------------------------------------------------
+   Brand
+   --------------------------------------------------------- */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 4px 8px 24px;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  background: #e7eef8;
+  color: #0b0f15;
+
+  font-family: "Space Grotesk";
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.brand-name {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  margin-top: 2px;
+
+  color: #6e7a89;
+
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   New Conversation
+   --------------------------------------------------------- */
+
+.new-chat {
+  padding: 12px;
+
+  border: 1px solid #283241;
+  border-radius: 9px;
+
+  background: #171e28;
+  color: #e9eef5;
+
+  text-align: left;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.new-chat:hover {
+  background: #202a37;
+}
+
+
+/* ---------------------------------------------------------
+   Sidebar Sections
+   --------------------------------------------------------- */
+
+.sidebar-section {
+  margin-top: 28px;
+}
+
+.section-label {
+  margin-bottom: 10px;
+
+  color: #667384;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   5. PDF UPLOAD
+   ========================================================= */
+
+.drop-zone {
+  min-height: 145px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border: 1px dashed #344253;
+  border-radius: 12px;
+
+  background: #10161e;
+  color: #9aa6b6;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.drop-zone:hover,
+.drop-zone.dragging {
+  border-color: #7597c4;
+  background: #141c26;
+}
+
+.drop-zone strong {
+  color: #dce4ee;
+  font-size: 13px;
+}
+
+.drop-zone span {
+  color: #657284;
+  font-size: 11px;
+}
+
+.upload-icon {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background: #192331;
+  color: #b9c9dc;
+
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   6. SELECTED FILES
+   ========================================================= */
+
+.selected-files {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  margin-top: 12px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 9px;
+
+  border: 1px solid #202b38;
+  border-radius: 8px;
+
+  background: #121923;
+}
+
+.file-icon {
+  padding: 4px 5px;
+
+  border-radius: 5px;
+
+  background: #392025;
+  color: #ff9a9a;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.file-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.file-info span {
+  overflow: hidden;
+
+  color: #d9e0e8;
+
+  font-size: 11px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-info small {
+  color: #667384;
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   7. PROCESS BUTTON
+   ========================================================= */
+
+.process-button {
+  width: 100%;
+
+  margin-top: 10px;
+  padding: 12px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #e9eef5;
+  color: #0a0e14;
+
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.process-button:hover:not(:disabled) {
+  background: #ffffff;
+}
+
+.process-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   8. INDEX STATUS
+   ========================================================= */
+
+.status-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px;
+
+  border: 1px solid #20332a;
+  border-radius: 9px;
+
+  background: #0e1713;
+}
+
+.status-card strong,
+.status-card span {
+  display: block;
+}
+
+.status-card strong {
+  color: #9ee5b9;
+  font-size: 12px;
+}
+
+.status-card span {
+  margin-top: 2px;
+
+  color: #63746a;
+  font-size: 10px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #5fd18a;
+
+  box-shadow:
+    0 0 12px rgba(95, 209, 138, 0.45);
+}
+
+.muted-note {
+  color: #667384;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   9. SIDEBAR FOOTER
+   ========================================================= */
+
+.sidebar-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  margin-top: auto;
+  padding: 18px 4px 0;
+
+  color: #4e5a69;
+
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   10. MAIN PANEL
+   ========================================================= */
+
+.main-panel {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   11. TOP BAR
+   ========================================================= */
+
+.topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 34px 48px 20px;
+
+  border-bottom: 1px solid #151d27;
+}
+
+.eyebrow {
+  color: #667384;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.topbar h1 {
+  margin: 6px 0 0;
+
+  color: #eef2f7;
+
+  font-family: "Space Grotesk";
+  font-size: 25px;
+
+  letter-spacing: -0.03em;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #718092;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   12. THEME TOGGLE
+   ========================================================= */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 11px;
+
+  border: 1px solid #293544;
+  border-radius: 8px;
+
+  background: #111720;
+  color: #aeb9c7;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: #19222d;
+  border-color: #405064;
+  color: #eef3f8;
+}
+
+.theme-icon {
+  display: grid;
+  place-items: center;
+
+  font-size: 14px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   13. WELCOME SCREEN
+   ========================================================= */
+
+.welcome {
+  width: min(980px, calc(100% - 64px));
+
+  margin: auto;
+  padding: 40px 0 140px;
+}
+
+.hero-badge {
+  display: inline-block;
+
+  padding: 6px 9px;
+
+  border: 1px solid #283545;
+  border-radius: 6px;
+
+  background: #111822;
+  color: #7d91a9;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.welcome h2 {
+  max-width: 760px;
+
+  margin: 22px 0 12px;
+
+  color: #eef2f7;
+
+  font-family: "Space Grotesk";
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 0.98;
+
+  letter-spacing: -0.06em;
+}
+
+.welcome h2 span {
+  color: #7fa7d7;
+}
+
+.welcome > p {
+  max-width: 650px;
+
+  color: #7d8998;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   Feature Cards
+   --------------------------------------------------------- */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+
+  margin-top: 50px;
+}
+
+.feature-card {
+  min-height: 170px;
+
+  padding: 22px;
+
+  border: 1px solid #202b38;
+  border-radius: 12px;
+
+  background: #0d131b;
+}
+
+.feature-number {
+  color: #506075;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.feature-card h3 {
+  margin: 28px 0 8px;
+
+  color: #eef2f7;
+
+  font-family: "Space Grotesk";
+  font-size: 18px;
+}
+
+.feature-card p {
+  margin: 0;
+
+  color: #687688;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.empty-hint {
+  margin-top: 28px;
+
+  color: #4f5c6c;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   14. CHAT AREA
+   ========================================================= */
+
+.chat-area {
+  flex: 1;
+
+  width: min(900px, calc(100% - 64px));
+
+  margin: 0 auto;
+  padding: 35px 0 170px;
+}
+
+.message-row {
+  display: flex;
+  gap: 14px;
+
+  margin-bottom: 32px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+
+  background: #1b2430;
+  color: #cbd5e2;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.message-row.user .avatar {
+  background: #e5ebf2;
+  color: #0b0f15;
+}
+
+.message-content {
+  min-width: 0;
+  max-width: 780px;
+}
+
+.message-label {
+  margin-bottom: 7px;
+
+  color: #637083;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   15. MESSAGE CONTENT
+   ========================================================= */
+
+.message-text {
+  color: #dbe2eb;
+
+  font-size: 14px;
+  line-height: 1.75;
+
+  white-space: pre-wrap;
+}
+
+
+/* =========================================================
+   16. MARKDOWN
+   ========================================================= */
+
+/* Paragraphs */
+
+.message-text p {
+  margin: 0 0 14px;
+}
+
+.message-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Bold */
+
+.message-text strong {
+  color: #f1f5f9;
+  font-weight: 700;
+}
+
+
+/* Italic */
+
+.message-text em {
+  color: #b9c5d4;
+}
+
+
+/* Headings */
+
+.message-text h1,
+.message-text h2,
+.message-text h3,
+.message-text h4 {
+  margin: 18px 0 9px;
+
+  color: #eef3f8;
+
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.message-text h1 {
+  font-size: 24px;
+}
+
+.message-text h2 {
+  font-size: 20px;
+}
+
+.message-text h3 {
+  font-size: 17px;
+}
+
+
+/* Lists */
+
+.message-text ul,
+.message-text ol {
+  margin: 8px 0 16px;
+  padding-left: 22px;
+}
+
+.message-text li {
+  margin: 5px 0;
+}
+
+
+/* Blockquotes */
+
+.message-text blockquote {
+  margin: 14px 0;
+  padding: 10px 14px;
+
+  border-left: 3px solid #607d9e;
+  border-radius: 0 7px 7px 0;
+
+  background: #10161e;
+  color: #aab6c5;
+}
+
+
+/* Inline code */
+
+.message-text code {
+  padding: 2px 5px;
+
+  border-radius: 4px;
+
+  background: #151c25;
+  color: #c8d5e5;
+
+  font-family: Consolas, monospace;
+  font-size: 0.9em;
+}
+
+
+/* Code blocks */
+
+.message-text pre {
+  margin: 14px 0;
+  padding: 14px;
+
+  overflow-x: auto;
+
+  border: 1px solid #222d3a;
+  border-radius: 8px;
+
+  background: #0b1016;
+}
+
+.message-text pre code {
+  padding: 0;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   17. MARKDOWN TABLES
+   ========================================================= */
+
+.message-text table {
+  width: 100%;
+
+  margin: 16px 0;
+
+  border-collapse: collapse;
+
+  border: 1px solid #293544;
+
+  font-size: 12px;
+}
+
+.message-text th {
+  padding: 10px 12px;
+
+  border: 1px solid #293544;
+
+  background: #151d27;
+  color: #dce5ef;
+
+  font-weight: 700;
+  text-align: left;
+}
+
+.message-text td {
+  padding: 10px 12px;
+
+  border: 1px solid #293544;
+
+  background: #0e141c;
+  color: #b8c4d2;
+}
+
+.message-text tr:nth-child(even) td {
+  background: #101720;
+}
+
+
+/* =========================================================
+   18. MARKDOWN LINKS / DIVIDERS
+   ========================================================= */
+
+.message-text a {
+  color: #8eb4df;
+  text-decoration: underline;
+}
+
+.message-text hr {
+  margin: 18px 0;
+
+  border: 0;
+  border-top: 1px solid #26313e;
+}
+
+
+/* =========================================================
+   19. SOURCES
+   ========================================================= */
+
+.sources {
+  margin-top: 14px;
+}
+
+.sources-title {
+  margin-bottom: 7px;
+
+  color: #586678;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.source-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  max-width: 100%;
+
+  margin: 0 6px 6px 0;
+  padding: 7px 9px;
+
+  border: 1px solid #25303d;
+  border-radius: 7px;
+
+  background: #10161e;
+  color: #8290a1;
+
+  font-size: 10px;
+}
+
+.source-chip span {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.source-chip b {
+  color: #a8bdd6;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   20. TYPING INDICATOR
+   ========================================================= */
+
+.typing {
+  display: flex;
+  gap: 5px;
+
+  padding: 8px 0;
+}
+
+.typing span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #718096;
+
+  animation: pulse 1.1s infinite ease-in-out;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+
+/* =========================================================
+   21. ERROR BANNER
+   ========================================================= */
+
+.error-banner {
+  position: fixed;
+
+  left: 50%;
+  bottom: 104px;
+
+  z-index: 10;
+
+  width: min(700px, calc(100% - 40px));
+
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 10px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #4d2a2e;
+  border-radius: 9px;
+
+  background: #281619;
+  color: #f0a5a5;
+
+  font-size: 11px;
+}
+
+.error-banner strong {
+  color: #ffb0b0;
+}
+
+
+/* =========================================================
+   22. CHAT COMPOSER
+   ========================================================= */
+
+.composer {
+  position: fixed;
+
+  left: 300px;
+  right: 0;
+  bottom: 0;
+
+  z-index: 5;
+
+  padding: 18px 48px 22px;
+
+  background:
+    linear-gradient(
+      transparent,
+      #090c11 25%
+    );
+}
+
+.composer-inner {
+  width: min(900px, 100%);
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 7px;
+
+  border: 1px solid #293544;
+  border-radius: 12px;
+
+  background: #111720;
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+.composer input {
+  flex: 1;
+  min-width: 0;
+
+  padding: 12px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+  color: #e4eaf2;
+
+  font-size: 13px;
+}
+
+.composer input::placeholder {
+  color: #596677;
+}
+
+.composer button {
+  width: 38px;
+  height: 38px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #e6ecf3;
+  color: #0a0e13;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.composer button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.composer-note {
+  width: min(900px, 100%);
+
+  margin: 7px auto 0;
+
+  color: #414d5c;
+
+  font-size: 9px;
+  text-align: center;
+}
+
+
+/* =========================================================
+   23. LIGHT THEME
+   ========================================================= */
+
+.app-shell.light {
+  background:
+    radial-gradient(
+      circle at 70% 10%,
+      rgba(52, 120, 246, 0.06),
+      transparent 30%
+    ),
+    #f5f7fa;
+
+  color: #18202b;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Sidebar
+   --------------------------------------------------------- */
+
+.app-shell.light .sidebar {
+  background: #ffffff;
+  border-right-color: #e2e7ed;
+}
+
+.app-shell.light .brand-mark {
+  background: #18202b;
+  color: #ffffff;
+}
+
+.app-shell.light .brand-name {
+  color: #18202b;
+}
+
+.app-shell.light .brand-subtitle {
+  color: #7c8795;
+}
+
+.app-shell.light .new-chat {
+  background: #f4f6f8;
+  border-color: #dce2e8;
+  color: #27313d;
+}
+
+.app-shell.light .new-chat:hover {
+  background: #e9edf2;
+}
+
+.app-shell.light .section-label {
+  color: #87919d;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Upload
+   --------------------------------------------------------- */
+
+.app-shell.light .drop-zone {
+  border-color: #cbd4de;
+  background: #f8fafc;
+  color: #7a8795;
+}
+
+.app-shell.light .drop-zone:hover,
+.app-shell.light .drop-zone.dragging {
+  border-color: #7897bb;
+  background: #f1f5f9;
+}
+
+.app-shell.light .drop-zone strong {
+  color: #26313d;
+}
+
+.app-shell.light .drop-zone span {
+  color: #7b8794;
+}
+
+.app-shell.light .upload-icon {
+  background: #e9eef4;
+  color: #52657a;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Files
+   --------------------------------------------------------- */
+
+.app-shell.light .file-item {
+  background: #f7f9fb;
+  border-color: #dfe5eb;
+}
+
+.app-shell.light .file-info span {
+  color: #303b47;
+}
+
+.app-shell.light .file-info small {
+  color: #8994a0;
+}
+
+.app-shell.light .file-icon {
+  background: #fceaea;
+  color: #d85c5c;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Process Button
+   --------------------------------------------------------- */
+
+.app-shell.light .process-button {
+  background: #18202b;
+  color: #ffffff;
+}
+
+.app-shell.light .process-button:hover:not(:disabled) {
+  background: #27313d;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Status
+   --------------------------------------------------------- */
+
+.app-shell.light .status-card {
+  background: #f0faf4;
+  border-color: #cfe9d8;
+}
+
+.app-shell.light .status-card strong {
+  color: #318052;
+}
+
+.app-shell.light .status-card span {
+  color: #718779;
+}
+
+.app-shell.light .muted-note {
+  color: #7d8996;
+}
+
+.app-shell.light .sidebar-footer {
+  color: #8b96a2;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Top Bar
+   --------------------------------------------------------- */
+
+.app-shell.light .topbar {
+  border-bottom-color: #e2e7ed;
+}
+
+.app-shell.light .eyebrow {
+  color: #7c8794;
+}
+
+.app-shell.light .topbar h1 {
+  color: #18202b;
+}
+
+.app-shell.light .system-status {
+  color: #75818e;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Theme Button
+   --------------------------------------------------------- */
+
+.app-shell.light .theme-toggle {
+  background: #ffffff;
+  border-color: #d7dee6;
+  color: #465362;
+}
+
+.app-shell.light .theme-toggle:hover {
+  background: #f1f4f7;
+  border-color: #bfc9d4;
+  color: #18202b;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Welcome
+   --------------------------------------------------------- */
+
+.app-shell.light .hero-badge {
+  background: #eef3f8;
+  border-color: #d5dee8;
+  color: #60758c;
+}
+
+.app-shell.light .welcome h2 {
+  color: #18202b;
+}
+
+.app-shell.light .welcome h2 span {
+  color: #557fae;
+}
+
+.app-shell.light .welcome > p {
+  color: #687583;
+}
+
+.app-shell.light .feature-card {
+  background: #ffffff;
+  border-color: #dfe5eb;
+}
+
+.app-shell.light .feature-number {
+  color: #8290a0;
+}
+
+.app-shell.light .feature-card h3 {
+  color: #202a35;
+}
+
+.app-shell.light .feature-card p {
+  color: #74808d;
+}
+
+.app-shell.light .empty-hint {
+  color: #87929e;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Chat
+   --------------------------------------------------------- */
+
+.app-shell.light .chat-area {
+  color: #25303b;
+}
+
+.app-shell.light .avatar {
+  background: #e7edf3;
+  color: #344252;
+}
+
+.app-shell.light .message-row.user .avatar {
+  background: #18202b;
+  color: #ffffff;
+}
+
+.app-shell.light .message-label {
+  color: #7c8794;
+}
+
+.app-shell.light .message-text {
+  color: #303b47;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Markdown
+   --------------------------------------------------------- */
+
+.app-shell.light .message-text strong {
+  color: #18202b;
+}
+
+.app-shell.light .message-text em {
+  color: #596776;
+}
+
+.app-shell.light .message-text h1,
+.app-shell.light .message-text h2,
+.app-shell.light .message-text h3,
+.app-shell.light .message-text h4 {
+  color: #18202b;
+}
+
+.app-shell.light .message-text blockquote {
+  background: #f0f3f6;
+  border-left-color: #7893b2;
+  color: #65717e;
+}
+
+.app-shell.light .message-text code {
+  background: #edf1f5;
+  color: #354250;
+}
+
+.app-shell.light .message-text pre {
+  background: #eef2f6;
+  border-color: #d6dee7;
+}
+
+.app-shell.light .message-text pre code {
+  background: transparent;
+}
+
+.app-shell.light .message-text table {
+  border-color: #d5dde5;
+}
+
+.app-shell.light .message-text th {
+  background: #edf1f5;
+  border-color: #d5dde5;
+  color: #293542;
+}
+
+.app-shell.light .message-text td {
+  background: #ffffff;
+  border-color: #d5dde5;
+  color: #465362;
+}
+
+.app-shell.light .message-text tr:nth-child(even) td {
+  background: #f7f9fb;
+}
+
+.app-shell.light .message-text a {
+  color: #416f9f;
+}
+
+.app-shell.light .message-text hr {
+  border-top-color: #d8dfe6;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Sources
+   --------------------------------------------------------- */
+
+.app-shell.light .sources-title {
+  color: #7c8794;
+}
+
+.app-shell.light .source-chip {
+  background: #f5f7f9;
+  border-color: #d8e0e7;
+  color: #6b7784;
+}
+
+.app-shell.light .source-chip b {
+  color: #4f7194;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Composer
+   --------------------------------------------------------- */
+
+.app-shell.light .composer {
+  background:
+    linear-gradient(
+      transparent,
+      #f5f7fa 25%
+    );
+}
+
+.app-shell.light .composer-inner {
+  background: #ffffff;
+  border-color: #d3dbe4;
+
+  box-shadow:
+    0 15px 50px rgba(25, 35, 45, 0.08);
+}
+
+.app-shell.light .composer input {
+  color: #26313d;
+}
+
+.app-shell.light .composer input::placeholder {
+  color: #8a95a1;
+}
+
+.app-shell.light .composer button {
+  background: #18202b;
+  color: #ffffff;
+}
+
+.app-shell.light .composer-note {
+  color: #89939f;
+}
+
+
+/* ---------------------------------------------------------
+   Light — Error
+   --------------------------------------------------------- */
+
+.app-shell.light .error-banner {
+  background: #fff1f1;
+  border-color: #efcaca;
+  color: #b34f4f;
+}
+
+.app-shell.light .error-banner strong {
+  color: #a63f3f;
+}
+
+
+/* =========================================================
+   24. RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .sidebar {
+    width: 240px;
+    min-width: 240px;
+  }
+
+  .composer {
+    left: 240px;
+
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .topbar {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   25. RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .app-shell {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+
+    border-right: 0;
+    border-bottom: 1px solid #1d2530;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .main-panel {
+    min-height: 65vh;
+  }
+
+  .topbar {
+    padding: 24px 18px;
+  }
+
+  .topbar-actions {
+    gap: 0;
+  }
+
+  .system-status {
+    display: none;
+  }
+
+  .theme-toggle {
+    padding: 7px 9px;
+  }
+
+  .theme-toggle span:last-child {
+    display: none;
+  }
+
+  .welcome {
+    width: calc(100% - 36px);
+
+    padding-top: 28px;
+  }
+
+  .chat-area {
+    width: calc(100% - 36px);
+  }
+
+  .composer {
+    position: sticky;
+
+    left: auto;
+    right: auto;
+
+    padding: 12px 18px 16px;
+  }
+
+  .error-banner {
+    bottom: 95px;
+  }
+
+  /* =========================================================
+   MULTI-PDF UPLOAD
+   ========================================================= */
+
+.upload-hint {
+  margin-top: 2px;
+  color: #536172;
+  font-size: 9px;
+}
+
+.selected-files {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.selected-files-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 2px;
+
+  color: #718092;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.selected-files-header strong {
+  min-width: 20px;
+  padding: 3px 6px;
+
+  border-radius: 5px;
+
+  background: #1a2430;
+  color: #a9bfd8;
+
+  font-size: 9px;
+  text-align: center;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 9px;
+
+  border: 1px solid #202b38;
+  border-radius: 8px;
+
+  background: #121923;
+}
+
+.file-info {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.file-info span {
+  overflow: hidden;
+
+  color: #d9e0e8;
+
+  font-size: 11px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-info small {
+  color: #667384;
+  font-size: 9px;
+}
+
+.remove-file {
+  width: 23px;
+  height: 23px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+  color: #667384;
+
+  font-size: 17px;
+  line-height: 1;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.remove-file:hover {
+  background: #392025;
+  color: #ff8f8f;
+}
+}
