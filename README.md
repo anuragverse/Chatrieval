@@ -1,6 +1,16 @@
 # Chatrieval
 
-Full-stack AI PDF assistant using React, Vite, FastAPI, local MiniLM embeddings, FAISS, and Groq GPT-OSS 120B.
+Full-stack RAG based AI PDF assistant using React, Vite, FastAPI, local MiniLM embeddings, FAISS, and Groq GPT-OSS 120B.
+
+## Screenshots
+
+### Main Interface
+
+![Chatrieval Main Interface](screenshots/chatrieval-ui.png)
+
+### Chat
+
+![Chatrieval Document Chat](screenshots/chatrieval-chat.png)
 
 ## Architecture
 
@@ -16,7 +26,6 @@ FastAPI
      +--> Retrieved chunks --> Groq GPT-OSS 120B --> Answer + sources
 ```
 
-OCR is intentionally disabled. Text-based pages are processed; image-only pages are skipped. A page containing normal text plus images still works—the text is extracted and the images are ignored.
 
 ## Prerequisites
 
@@ -63,6 +72,3 @@ npm run dev
 
 Open `http://localhost:5173`.
 
-## Notes
-
-The FAISS index is stored in backend memory for this local version. Restarting FastAPI clears the indexed documents. For deployment, add persistent storage/vector DB and authentication.
