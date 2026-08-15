@@ -6,11 +6,11 @@ Full-stack RAG based AI PDF assistant using React, Vite, FastAPI, local MiniLM e
 
 ### Main Interface
 
-![Chatrieval Main Interface](screenshots/chatrieval_UI.png)
+![Chatrieval Main Interface](screenshots/chatrievalUI.png)
 
 ### Chat
 
-![Chatrieval Document Chat](screenshots/Chatrieval_Chat.png)
+![Chatrieval Document Chat](screenshots/ChatrievalChat.png)
 
 ## Architecture
 
