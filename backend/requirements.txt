@@ -3,7 +3,8 @@ uvicorn[standard]
 python-multipart
 python-dotenv
 groq
-PyPDF2
-sentence-transformers
+pypdf
+fastembed
 faiss-cpu
+numpy
 langchain-text-splitters
